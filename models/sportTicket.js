@@ -17,7 +17,9 @@ const sportTicketSchema = mongoose.Schema({
     profit: {type: Number, required: false},
     //awarded es para ver si el premio ya se le entregó al ganador
     awarded: {type: Boolean, required: false},
-    prize: {type: Number, required: false}
+    prize: {type: Number, required: false},
+    //checked es para cuando se evalúa si es ganador o no
+    checked: {type: Boolean, required: true}
 });
 
 sportTicketSchema.plugin(uniqueValidator);
